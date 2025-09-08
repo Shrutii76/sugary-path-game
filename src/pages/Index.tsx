@@ -1,12 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { HeroSection } from "@/components/HeroSection";
+import { IslandMap } from "@/components/IslandMap";
+import { AboutModal } from "@/components/AboutModal";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const [showMap, setShowMap] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
+  const { toast } = useToast();
+
+  const handleStartAdventure = () => {
+    setShowMap(true);
+    toast({
+      title: "Adventure Started! 🎮",
+      description: "Welcome to your candy-filled journey!",
+    });
+  };
+
+  const handleShowAbout = () => {
+    setShowAbout(true);
+  };
+
+  const handlePlayGame = (gameId: number) => {
+    toast({
+      title: `Game ${gameId} Selected! 🍭`,
+      description: "Game functionality coming soon!",
+    });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      {!showMap ? (
+        <HeroSection 
+          onStartAdventure={handleStartAdventure}
+          onShowAbout={handleShowAbout}
+        />
+      ) : (
+        <IslandMap onPlayGame={handlePlayGame} />
+      )}
+      
+      <AboutModal 
+        isOpen={showAbout} 
+        onClose={() => setShowAbout(false)} 
+      />
     </div>
   );
 };

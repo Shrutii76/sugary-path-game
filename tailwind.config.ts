@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        candy: {
+          pink: "hsl(var(--candy-pink))",
+          purple: "hsl(var(--candy-purple))",
+          blue: "hsl(var(--candy-blue))",
+          yellow: "hsl(var(--candy-yellow))",
+          orange: "hsl(var(--candy-orange))",
+          green: "hsl(var(--candy-green))",
+        },
+        game: {
+          locked: "hsl(var(--game-locked))",
+          available: "hsl(var(--game-available))",
+          completed: "hsl(var(--game-completed))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +75,15 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-candy': 'var(--gradient-candy)',
+        'gradient-sky': 'var(--gradient-sky)',
+        'gradient-island': 'var(--gradient-island)',
+      },
+      boxShadow: {
+        'candy': 'var(--shadow-candy)',
+        'game': 'var(--shadow-game)',
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +102,39 @@ export default {
             height: "0",
           },
         },
+        "bounce-gentle": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-5px)",
+          },
+        },
+        "pulse-candy": {
+          "0%, 100%": {
+            transform: "scale(1)",
+            boxShadow: "var(--shadow-candy)",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+            boxShadow: "0 15px 40px -5px hsl(var(--candy-pink) / 0.5)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bounce-gentle": "bounce-gentle 2s infinite",
+        "pulse-candy": "pulse-candy 2s infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },

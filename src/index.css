@@ -8,35 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Candy Island Color Palette */
+    --background: 320 100% 95%;
+    --foreground: 280 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 280 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 280 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Candy Colors */
+    --primary: 320 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 280 80% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 200 90% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --candy-pink: 320 85% 60%;
+    --candy-purple: 280 80% 65%;
+    --candy-blue: 200 90% 60%;
+    --candy-yellow: 50 95% 65%;
+    --candy-orange: 25 95% 65%;
+    --candy-green: 140 70% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Game UI Colors */
+    --game-locked: 0 0% 75%;
+    --game-available: 200 90% 60%;
+    --game-completed: 140 70% 60%;
+
+    --muted: 320 50% 90%;
+    --muted-foreground: 280 15% 45%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 320 30% 85%;
+    --input: 320 30% 85%;
+    --ring: 320 85% 60%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-candy: linear-gradient(135deg, hsl(var(--candy-pink)), hsl(var(--candy-purple)));
+    --gradient-sky: linear-gradient(180deg, hsl(200 90% 80%), hsl(var(--background)));
+    --gradient-island: linear-gradient(45deg, hsl(var(--candy-blue)), hsl(var(--candy-green)));
+    
+    /* Shadows */
+    --shadow-candy: 0 10px 30px -5px hsl(var(--candy-pink) / 0.3);
+    --shadow-game: 0 5px 15px -3px hsl(var(--primary) / 0.4);
 
     --sidebar-background: 0 0% 98%;
 
